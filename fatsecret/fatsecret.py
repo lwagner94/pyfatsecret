@@ -49,10 +49,10 @@ class Fatsecret:
             name='fatsecret',
             consumer_key=consumer_key,
             consumer_secret=consumer_secret,
-            request_token_url='http://www.fatsecret.com/oauth/request_token',
-            access_token_url='http://www.fatsecret.com/oauth/access_token',
-            authorize_url='http://www.fatsecret.com/oauth/authorize',
-            base_url='http://platform.fatsecret.com/rest/server.api')
+            request_token_url='https://www.fatsecret.com/oauth/request_token',
+            access_token_url='https://www.fatsecret.com/oauth/access_token',
+            authorize_url='https://www.fatsecret.com/oauth/authorize',
+            base_url='https://platform.fatsecret.com/rest/server.api')
 
         # Open prior session or default to unauthorized session
         if session_token:
@@ -66,7 +66,7 @@ class Fatsecret:
     @property
     def api_url(self):
 
-        return 'http://platform.fatsecret.com/rest/server.api'
+        return 'https://platform.fatsecret.com/rest/server.api'
 
     def get_authorize_url(self, callback_url='oob'):
         """ URL used to authenticate app to access Fatsecret User data
